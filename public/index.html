@@ -10,7 +10,39 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+    <h1>My Recipes: </h1><br><br>
+    <p><span id='display'>
+      There are no recipes to list
+    </span></p>    
+<button id="addRecipe" onClick="toggleText();">Add Recipe</button>
+<form id="Myid" style="display: none;">
+  <label><b>recipe-name: </b></label><br>
+  <input type="text" name="recipe-name" id="name" /><br>
+  <label><b>recipe-instructions:</b></label></textbox><br>
+  <input type="text" name="recipe-instructions" id="instructions" /><br><br>
+</form>
+<input type="submit" id="submit" style="display: none;" onclick="showInput();"><br/>
+<div id="root"></div>
+<script language="JavaScript">
+    function showInput() {
+      document.getElementById('display').innerHTML = `<ol>
+                        <li>${document.getElementById("name").value}</li>
+                        <li>${document.getElementById("instructions").value}</li>
+                    </ol>`
+    document.getElementById("addRecipe").style.display = "block"
+    document.getElementById("Myid").style.display = "none"
+    document.getElementById("submit").style.display = "none"
+    }
+  function toggleText(){
+    var x = document.getElementById("Myid");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      document.getElementById("addRecipe").style.display = "none"
+                document.getElementById("submit").style.display = "block"
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+</body>
 </html>
