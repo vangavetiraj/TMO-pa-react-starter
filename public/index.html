@@ -9,16 +9,15 @@
     />
     <title>React App</title>
   </head>
-    
-<body>
+    <body>
   <label>My Recipes: </label><br><br>
-<button id="addRecipie" onClick="toggleText();">Add Recipe</button>
+<button id="addRecipe" onClick="toggleText();">Add Recipe</button>
 
 <form id="Myid" style="display: none;">
-<label><b>Recipe - Name: </b></label><br>
-<input type="text" name="recipie-name" id="name"><br>
-<label><b>Recipe - Instructions:</b></label><br>
-<input type="text" name="recipie-instructions" id="instructions"><br><br>
+<label><b>recipe-name: </b></label><br>
+<input type="text" name="recipe-name" id="name"><br>
+<label><b>recipe-instructions:</b></label><br>
+<input type="text" name="recipe-instructions" id="instructions"><br><br>
 </form>
   <input type="submit" id="submit" style="display: none;" onclick="showInput();"><br/>
 <p><span id='display'>
@@ -29,7 +28,7 @@
   function showInput() {
   document.getElementById('display').innerHTML = document.getElementById("name").value + ' - ' + document.getElementById("instructions").value
 
-          document.getElementById("addRecipie").style.display = "block"
+          document.getElementById("addRecipe").style.display = "block"
           document.getElementById("Myid").style.display = "none"
           document.getElementById("submit").style.display = "none"
 }
@@ -37,7 +36,7 @@ function toggleText(){
   var x = document.getElementById("Myid");
   if (x.style.display === "none") {
     x.style.display = "block";
-    document.getElementById("addRecipie").style.display = "none"
+    document.getElementById("addRecipe").style.display = "none"
               document.getElementById("submit").style.display = "block"
   } else {
     x.style.display = "none";
