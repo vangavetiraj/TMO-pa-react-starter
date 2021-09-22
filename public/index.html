@@ -14,14 +14,14 @@
     <p><span id='display'>
       There are no recipes to list
     </span></p>    
-<button id="addRecipe" onClick="toggleText();">Add Recipe</button>
+<button role="button" id="addRecipe" onClick="toggleText();">Add Recipe</button>
 <form id="Myid" style="display: none;">
   <label><b>recipe-name: </b></label><br>
-  <input type="text" name="recipe-name" id="name" /><br>
+  <input role="textbox" type="text" name="recipe-name" id="name" /><br>
   <label><b>recipe-instructions:</b></label></textbox><br>
-  <input type="text" name="recipe-instructions" id="instructions" /><br><br>
+  <input role="textbox" type="text" name="recipe-instructions" id="instructions" /><br><br>
 </form>
-<input type="submit" id="submit" style="display: none;" onclick="showInput();"><br/>
+<input role="button" type="submit" id="submit" style="display: none;" onclick="showInput();"><br/>
 <div id="root"></div>
 <script language="JavaScript">
     function showInput() {
